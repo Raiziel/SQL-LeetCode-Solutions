@@ -1,0 +1,7 @@
+# Write your MySQL query statement below
+SELECT M.name 
+FROM Employee E
+CROSS JOIN Employee M
+on E.managerID = M.id
+GROUP BY E.managerID
+HAVING COUNT(E.ID)>=5
