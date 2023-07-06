@@ -1,0 +1,8 @@
+# Write your MySQL query statement below
+SELECT DISTINCT E1.employee_id
+FROM Employees E1
+LEFT JOIN Employees E2
+ON E1.manager_id = E2.employee_id
+WHERE E1.salary<30000 AND E2.employee_id is NULL AND E1.manager_id is NOT NULL
+ORDER BY employee_id
+;
